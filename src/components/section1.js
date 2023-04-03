@@ -6,14 +6,14 @@ import SwiperCore, {Autoplay} from 'swiper';
 
 // Import Swiper styles
 import 'swiper/css';
-import fetcher from "@/lib/fetcher";
+import Fetcher from "@/lib/fetcher";
 import Spinner from "./_child/spinner";
 import Error from "./_child/error";
 
 
 export default function section1() {
     SwiperCore.use([Autoplay])
-    const { data, isLoading, isError } = fetcher('api/trending')
+    const { data, isLoading, isError } = Fetcher('api/trending')
     if(isLoading) return <Spinner />
     if(isError) return <Error />
   
@@ -50,15 +50,15 @@ function Slide({data})
     return (
       <div className="grid md:grid-cols-2">
         <div className="image">
-            <Link href={`/posts/${id}`}><Image src={img || "/"} width={600} height={600} /></Link>
+            <Link href={`/posts/${id}`}><Image src={img || "/"} width={600} height={600} alt="" /></Link>
         </div>
-        <div className="info flex justify-center flex-col">
+        <div className="info flex justify-center flex-col p-4">
             <div className="cat">
                 <Link href={`/posts/${id}`} className="text-orange-600 hover:text-orange-800">{category || "Unknown"}</Link>
                 <Link href={`/posts/${id}`} className="text-gray-800 hover:text-gray-600">- {published || "Unknown"}</Link>
             </div>
             <div className="title">
-                <Link href={`/posts/${id}`} className="text-3xl md:text-6xl font-bold text-gray-800 hover:text-gray-600">{title || "Unknown"}</Link>
+                <Link href={`/posts/${id}`} className="text-3xl md:text-4xl font-bold text-gray-800 hover:text-gray-600">{title || "Unknown"}</Link>
             </div>
             <p className="text-gray-500 py-3">
                 {description || "description"}

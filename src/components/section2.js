@@ -1,13 +1,13 @@
 import Link from "next/link"
 import Image from "next/image"
 import Author from "./_child/author"
-import fetcher from "../lib/fetcher"
+import Fetcher from "../lib/fetcher"
 import Spinner from "./_child/spinner"
 import Error from "./_child/error"
 
 export default function section2() 
 {
-    const { data, isLoading, isError } = fetcher('api/posts')
+    const { data, isLoading, isError } = Fetcher('api/posts')
     if(isLoading) return <Spinner/>
     if(isError) return <Error />
 
@@ -33,7 +33,7 @@ function Post( { data } ){
     return (
         <div className="item">
             <div className="images">
-                <Link href={`/posts/${id}`}><Image src={img || "/"} className="rounded" width={500} height={350} /></Link>
+                <Link href={`/posts/${id}`}><Image src={img || "/"} className="rounded" width={500} height={350} alt="" /></Link>
             </div>
             <div className="info flex justify-center flex-col py-4">
                 <div className="cat">

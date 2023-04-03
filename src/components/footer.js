@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Newsletter from "./_child/newsletter";
 
 
-export default function footer() {
+export default function Footer() {
 
   const bg = {
     backgroundImage : "url('/images/footer.png')",
@@ -12,7 +12,7 @@ export default function footer() {
   }
 
   return (	 
-    <footer className="bg-gray-50" style={bg}>
+    <footer className="bg-gray-100" style={bg}>
       <Newsletter></Newsletter>
       <div className="container mx-auto flex justify-center py-12">
           <div className="py-5">
@@ -22,7 +22,7 @@ export default function footer() {
                     <Link href={"/"}><ImYoutube color="#888888" /></Link>
               </div>
 
-              <p className="py-5 text-gray-400">Copyright ©2022 All rights reserved | This template is made with  by Daily Tuition</p>
+              <p className="py-5 text-gray-400">Copyright ©2023 All rights reserved | Made by Kelvin Kipchumba</p>
               <p className="text-gray-400 text-center">Terms & Condition</p>
           </div>
       </div>

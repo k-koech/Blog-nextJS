@@ -8,6 +8,15 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "serve": {
+    "executor": "@nrwl/next:server",
+    "defaultConfiguration": "development",
+    "options": {
+      "buildTarget": "test-nx:build",
+      "dev": true,
+      "port": 3000,
+      "hostname": "localhost"
+    }},
   "dependencies": {
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",

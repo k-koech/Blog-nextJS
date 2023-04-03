@@ -3,7 +3,7 @@ import Format from '../../layout/format'
 import Image from 'next/image'
 import Related from '@/components/_child/related'
 import getPost from '@/lib/helper'
-import fetcher from '@/lib/fetcher'
+import Fetcher from '@/lib/fetcher'
 import Spinner from '@/components/_child/spinner'
 import Error from '@/components/_child/error'
 import { useRouter } from 'next/router'
@@ -14,7 +14,7 @@ export default function Page({fallback})
   const router = useRouter()
   const {postId} = router.query;
 
-  const {data, isLoading, isError} = fetcher(`/api/posts/${postId}`)
+  const {data, isLoading, isError} = Fetcher(`api/posts/${postId}`)
 
   if(isLoading) return <Spinner />
   if(isError) return <Error />
@@ -40,7 +40,7 @@ function Article({id, title, subtitle, img, description, published, author })
             <h1 className='font-bold text-4xl text-center '> {title || "No Title" }</h1>
             <p className='text-gray-500 text-xl text-center'>{subtitle || "No Title" } </p>
             <div className='py-10'>
-                <Image src={img || "/"} height={600} width={900}/>
+                <Image src={img || "/"} height={600} width={900} alt=""/>
             </div>
             <div className='content text-gray-600 text-lg flex flex-col gap-4'>
                 {description || "No Description"}

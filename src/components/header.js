@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ImFacebook, ImYoutube, ImTwitter } from "react-icons/im";
 
 
-export default function header() {
+export default function Header() {
   return (
     <header className="bg-gray-50">
         <div className="xl:container xl:mx-auto flex flex-col items-center sm:flex-row sm:justify-between text-center py-3">
@@ -12,7 +12,7 @@ fucus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" placeho
             </div>
             <div className="shrink w-80 sm:order-2">
               <Link className="font-bold uppercase text-3xl" href={"/"}>
-                  Design
+                  KBlog
               </Link>
             </div>
             <div className="order-3 w-96 flex justify-center">

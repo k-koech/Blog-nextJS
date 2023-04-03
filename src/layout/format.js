@@ -3,7 +3,7 @@ import Header from "@/components/header"
 import Head from "next/head"
 
 
-function format({children}) {
+function Format({children}) {
   return (
     <>
     <Head>
@@ -19,4 +19,4 @@ function format({children}) {
   )
 }
 
-export default format
+export default Format

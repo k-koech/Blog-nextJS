@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import Author from "./_child/author"
-import fetcher from "../lib/fetcher"
+import Fetcher from "../lib/fetcher"
 import Spinner from "./_child/spinner"
 import Error from "./_child/error"
 
@@ -11,7 +11,7 @@ import SwiperCore, {Autoplay} from 'swiper';
 export default function section3() {
     SwiperCore.use([Autoplay])
 
-    const { data, isLoading, isError } = fetcher('api/popular')
+    const { data, isLoading, isError } = Fetcher('api/popular')
     if(isLoading) return <Spinner />
     if(isError) return <Error />
 
@@ -44,7 +44,7 @@ function Post({ data }){
     return (
         <div className="grid">
             <div className="images">
-                <Link href={`/posts/${id}`}><Image src={img || ""} width={600} height={400} /></Link>
+                <Link href={`/posts/${id}`}><Image src={img || ""} width={600} height={400} alt="" /></Link>
             </div>
             <div className="info flex justify-center flex-col py-4">
                 <div className="cat">
