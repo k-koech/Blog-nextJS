@@ -16,6 +16,9 @@ export default function Page({fallback})
 
   const {data, isLoading, isError} = Fetcher(`api/posts/${postId}`)
 
+  // if (router.isFallback) return <Spinner />
+  // if (router?.isFallback) return <Spinner />
+
   if(isLoading) return <Spinner />
   if(isError) return <Error />
 
