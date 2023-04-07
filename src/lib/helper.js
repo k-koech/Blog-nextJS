@@ -1,6 +1,6 @@
 
 // const baseURL = "http://127.0.0.1:3000/api/posts"
-const baseURL = "https://blog-next-js-6p3x-3es6jsczi-k-koech.vercel.app/api/posts"
+const baseURL = "https://blog-next-js-6p3x.vercel.app/api/posts"
 
 export default async function GetPost(id){
     const res = await fetch(`${baseURL}`)
