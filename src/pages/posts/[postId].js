@@ -16,9 +16,6 @@ export default function Page({fallback})
 
   const {data, isLoading, isError} = Fetcher(`api/posts/${postId}`)
 
-  // if (router.isFallback) return <Spinner />
-  // if (router?.isFallback) return <Spinner />
-
   if(isLoading) return <Spinner />
   if(isError) return <Error />
 
@@ -57,7 +54,7 @@ function Article({id, title, subtitle, img, description, published, author })
 
 
 // 
-export async function getStaticProps( { params } )
+export async function getStaticProps({ params })
 {
   const posts = await getPost(params.postId)
 
@@ -82,7 +79,10 @@ export async function getStaticPaths()
 
   return {
       paths,
-      fallback : false
+      fallback : true
   }
 
 }
+
+
+

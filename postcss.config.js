@@ -4,3 +4,5 @@ module.exports = {
     autoprefixer: {},
   },
 }
+// "port": 3000,
+// "hostname": "localhost"

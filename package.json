@@ -14,9 +14,7 @@
     "defaultConfiguration": "development",
     "options": {
       "buildTarget": "test-nx:build",
-      "dev": true,
-      "port": 3000,
-      "hostname": "localhost"
+      "dev": true
     }},
   "dependencies": {
     "eslint": "8.36.0",

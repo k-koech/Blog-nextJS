@@ -21,6 +21,9 @@ module.exports = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  env: {
+    baseURL: 'https://myapp-k-koech.vercel.app/',
+  },
 };
 
 

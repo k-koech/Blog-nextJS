@@ -10,7 +10,7 @@ export default function Newsletter(){
                     text-gray-700 focus:outline-none focus:shadow-outline" placeholder="Enter Your Email" />
                 </div>
 
-                <button className="bg-orange-400 px-20 py-3 rounded-full text-gray-50 text-xl">
+                <button className="bg-red-600 px-20 py-3 rounded-full text-gray-50 text-xl">
                     Subscribe
                 </button>
 

@@ -1,11 +1,11 @@
 
-// const baseURL = "http://127.0.0.1:3000/api/posts"
-const baseURL = "https://blog-next-js-kappa-ruby.vercel.app/api/posts"
+const url = "api/posts"
+// const baseURL = "https://blog-next-js-kappa-ruby.vercel.app/api/posts"
 
 // const baseURL = "/api/posts"
 
 export default async function GetPost(id){
-    const res = await fetch(`${baseURL}`)
+    const res = await fetch(process.env.baseURL+url)
     const posts = await res.json()
 
     if(id){
