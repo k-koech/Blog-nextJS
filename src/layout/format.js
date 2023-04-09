@@ -2,12 +2,11 @@ import Footer from "@/components/footer"
 import Header from "@/components/header"
 import Head from "next/head"
 
-
 function Format({children}) {
   return (
     <>
     <Head>
-      <title>Blogs</title> 
+      <title>Blog</title> 
     </Head>
 
       <Header/>
