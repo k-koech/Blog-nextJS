@@ -7,7 +7,7 @@ function Format({children}) {
   return (
     <>
     <Head>
-      <title>Blog</title> 
+      <title>Blogs</title> 
     </Head>
 
       <Header/>
