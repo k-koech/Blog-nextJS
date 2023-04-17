@@ -4,6 +4,9 @@ const nextConfig = {
 }
 
 module.exports = {
+  env: {
+    baseURL: 'https://nextblog-k-koech.vercel.app/',
+  },
   async headers() {
     return [
       {
@@ -21,9 +24,7 @@ module.exports = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  env: {
-    baseURL: 'https://myapp-k-koech.vercel.app/',
-  },
+ 
 };
 
 
